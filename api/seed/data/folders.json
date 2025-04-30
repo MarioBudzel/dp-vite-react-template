@@ -1,0 +1,65 @@
+[
+  {
+    "_id": { "$oid": "67d6e760c467cacf5d011f62" },
+    "title": "Presentations",
+    "color": "#E32636",
+    "owner": "67d471392e238c36caabcbab",
+    "createdAt": { "$date": "2025-03-16T14:59:44.436Z" },
+    "updatedAt": { "$date": "2025-03-16T14:59:44.436Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "67d6e7d8c467cacf5d011f70" },
+    "title": "Documents",
+    "color": "#40E0D0",
+    "owner": "67d471392e238c36caabcbab",
+    "createdAt": { "$date": "2025-03-16T15:01:44.383Z" },
+    "updatedAt": { "$date": "2025-03-16T15:01:44.383Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "67d6e87dc467cacf5d011f8b" },
+    "title": "Audio",
+    "color": "#C9A0dC",
+    "owner": "67d471392e238c36caabcbab",
+    "createdAt": { "$date": "2025-03-16T15:04:29.741Z" },
+    "updatedAt": { "$date": "2025-03-16T15:04:29.741Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "67d6e8fcc467cacf5d011fb0" },
+    "title": "Images",
+    "color": "#50C878",
+    "owner": "67d471392e238c36caabcbab",
+    "createdAt": { "$date": "2025-03-16T15:06:36.367Z" },
+    "updatedAt": { "$date": "2025-03-16T15:06:36.367Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "67d6e93cc467cacf5d011fde" },
+    "title": "Projects",
+    "color": "#48A2DF",
+    "owner": "67d471392e238c36caabcbab",
+    "createdAt": { "$date": "2025-03-16T15:07:40.135Z" },
+    "updatedAt": { "$date": "2025-03-16T15:07:40.135Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "67d6ea22c467cacf5d012005" },
+    "title": "TextFiles",
+    "color": "#FAE033",
+    "owner": "67d471392e238c36caabcbab",
+    "createdAt": { "$date": "2025-03-16T15:11:30.519Z" },
+    "updatedAt": { "$date": "2025-03-16T15:11:30.519Z" },
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "67d6eb87c467cacf5d012032" },
+    "title": "Videos",
+    "color": "#E9692C",
+    "owner": "67d471392e238c36caabcbab",
+    "createdAt": { "$date": "2025-03-16T15:17:27.824Z" },
+    "updatedAt": { "$date": "2025-03-16T15:17:27.824Z" },
+    "__v": 0
+  }
+]

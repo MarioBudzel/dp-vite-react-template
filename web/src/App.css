@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+:root {
+  --dashboard-sidebar-full-width: 300px;
+  --dashboard-sidebar-min-width: 90px;
+  --dashboard-header-height: 70px;
+  --sidebar-padding: 16px;
+  --sidebar-padding-link: 8px;
+  --sidebar-collapse-link-height: 36px;
+  --sidebar-bullet-width: 12px;
+  --landing-page-nav-height: 75px;
+  --components-sides-width: 300px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  flex: 1 1 auto;
+}

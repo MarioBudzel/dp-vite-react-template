@@ -1,0 +1,63 @@
+services:
+  nginx:
+    restart: always
+    depends_on:
+      - web
+      - api
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - "5173:80"
+    volumes:
+      - ./api/uploads:/app/uploads
+  web:
+    restart: unless-stopped
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./web
+    environment:
+      - WDS_SOCKET_PORT=0
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+      - VITE_API_BASE_URL=https://yourdomain.com
+    volumes:
+      - /app/node_modules
+      - ./web:/app
+  api:
+    restart: unless-stopped
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./api
+    environment:
+      - MONGO_DATABASE_URL=mongodb://mongo:27017/api
+      - TOKEN_KEY=bCdw+Lt632dyFc2JtZs2FFaoHHv7dOXtTgqIFG0rZ2JiOZywkTGJ+CiW8itbUF8py5ub7xsmmN/A1IAY9KVwGQ==
+    volumes:
+      - /app/node_modules
+      - ./api:/app
+      - ./api/uploads:/app/uploads
+  mongo:
+    image: "mongo"
+    command: mongod --logpath /dev/null
+    restart: always
+    container_name: vite-react-mongo
+    volumes:
+      - ./volumes/mongoApi:/data/db
+    ports:
+      - 27017:27017
+  mongo-express:
+    image: mongo-express:latest
+    container_name: vite-react-express
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
+      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_MONGODB_PORT: "27017"
+      ME_CONFIG_BASICAUTH_ADMINUSERNAME: "admin"
+      ME_CONFIG_BASICAUTH_ADMINPASSWORD: "admin"
+      ME_CONFIG_BASICAUTH_USERNAME: "user"
+      ME_CONFIG_BASICAUTH_PASSWORD: "password"
+    ports:
+      - "8881:8081"
+    depends_on:
+      - mongo
